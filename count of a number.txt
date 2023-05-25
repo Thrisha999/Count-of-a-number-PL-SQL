@@ -1,0 +1,26 @@
+--Question:to find count of a number
+
+--PL/SQL BLOCK:
+
+declare
+   i int;
+   n int;
+   x int:=0;
+begin
+	n:=&n;
+	while(n>0)
+	loop
+	   n:=trunc(n/10);
+    	   x:=x+1;
+	end loop;
+	dbms_output.put_line('count:'||x);
+end;
+/
+
+--output:
+Enter value for n: 112
+old   6:        n:=&n;
+new   6:        n:=112;
+count:3
+
+PL/SQL procedure succesfully completed
